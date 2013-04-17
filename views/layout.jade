@@ -1,0 +1,16 @@
+doctype 5
+html
+  head
+    title= title
+    !=css('style')
+  body
+    header
+      h1
+        img(src='/img/express.png')
+        span Express
+    article
+      block content
+    script(src='/lib/jquery-1.9.1.min.js')
+    script(src='/lib/underscore-min.js')
+    script(src='/lib/underscore.string.min.js')
+    !=js('script')

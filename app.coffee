@@ -14,6 +14,11 @@ app.use express.bodyParser()
 app.use express.methodOverride()
 app.use (require 'connect-assets') buildDir: 'public'
 app.use app.router
+app.use (require 'st')
+  url: '/'
+  path: path.resolve 'public'
+  index: no
+  passthrough: yes
 app.use express.static path.resolve 'public'
 
 if app.get 'env' is 'development'
